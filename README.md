@@ -23,6 +23,7 @@ yarn build
 
 ### directory
 
+```
 app/
 ├── .vuepress
 │   ├── components
@@ -62,6 +63,7 @@ app/
 └── test
     └── index.md
 build/                              // buildファイル
+```
 
 ## 開発メモ
 
