@@ -92,4 +92,3 @@ function updateMetaTags (meta, current) {
 </script>
 
 <style src="./styles/reset.styl" lang="stylus"></style>
-<style src="./styles/common.styl" lang="stylus"></style>

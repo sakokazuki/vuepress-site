@@ -1,14 +1,10 @@
 
-const path = require('path')
 const locales = require('./config-files/locales')
 const webpackConfig = require('./config-files/webpack.config.js')
-const webpack = require('webpack')
-
-
 
 module.exports = {
-  base: '/', // It should always start and end with a slash. ex) "/bar/"
-  title: 'Title', //This will be the prefix for all page titles,
+  base: '/',
+  title: 'Title',
   description: 'description config',
   port: '9999',
   dest: './build',

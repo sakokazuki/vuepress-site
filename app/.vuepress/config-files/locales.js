@@ -1,6 +1,4 @@
-// require DataJa from './data-ja'
-// import DataEn from './data-en'
-// import DataCommon from './data-common'
+
 const DataJa = require('./data-ja')
 const DataEn = require('./data-en')
 const DataCommon = require('./data-common')
