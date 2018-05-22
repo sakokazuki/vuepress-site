@@ -305,7 +305,7 @@ const isDirectory = (p)=>{
 const relativeFilePath = function(path){
   path = trimPath(path);
   const toPath = trimPath(this.$site.base + path).split('/').filter(v => v !== "");
-  const fromPath = trimPath(location.pathname).split('/').filter(v => v !== "");
+  const fromPath = trimPath(this.$page.path).split('/').filter(v => v !== "");
   const length = Math.min(fromPath.length, toPath.length);
   
   let samePartsLength = length;
