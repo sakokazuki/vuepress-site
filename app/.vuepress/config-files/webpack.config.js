@@ -2,7 +2,11 @@ const path = require('path')
 const webpack = require('webpack')
 
 module.exports = config => {
-  config.merge({ devtool: 'source-map' });
+  const isBuild = (process.env.NODE_ENV === 'production');
+  if(isBuild == false){
+    config.merge({ devtool: 'inline-source-map' });
+  }
+  
   config
     .module.rule('pug')
       .test(/\.pug$/)
