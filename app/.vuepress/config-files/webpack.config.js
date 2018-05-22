@@ -2,8 +2,8 @@ const path = require('path')
 const webpack = require('webpack')
 
 module.exports = config => {
-  const isBuild = (process.env.NODE_ENV === 'production');
-  if(isBuild == false){
+  const isProd = (process.env.NODE_ENV === 'production');
+  if(isProd == false){
     config.merge({ devtool: 'inline-source-map' });
   }
   
