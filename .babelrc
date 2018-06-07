@@ -1,11 +1,11 @@
 {
   "presets": [
-    ["env", {
+    ["@babel/preset-env", {
       "targets": {
-        "browsers": ["ie 10", ">0.25%"]
+        "browsers": ["ie 10", "safari >= 7"]
       },
-      "useBuiltIns": true
+      "modules": false,
+      "useBuiltIns": "usage"
     }]
-  ],
-  "plugins": ["syntax-dynamic-import"]
+  ]
 }

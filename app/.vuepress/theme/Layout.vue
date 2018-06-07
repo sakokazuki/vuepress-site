@@ -23,8 +23,6 @@
 
 <script>
 import Vue from 'vue'
-import "babel-polyfill"
-import { pathToComponentName } from '@app/util'
 
 export default {
   components: {  },
