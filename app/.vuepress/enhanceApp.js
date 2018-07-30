@@ -1,7 +1,7 @@
-import TitleMixin from './mixins/title-mixin'
-import CommonData from './mixins/common-data'
-import store from './store'
-import routersetup from './router'
+import TitleMixin from './enhance-files/mixins/title-mixin'
+import CommonData from './enhance-files/mixins/common-data'
+import store from './enhance-files/store'
+import routersetup from './enhance-files/router'
 
 export default ({
   Vue,

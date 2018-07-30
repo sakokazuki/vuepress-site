@@ -25,5 +25,4 @@ module.exports = {
   ],
   locales: locales,
   chainWebpack: webpackConfig,
-  hoge: 'hoge'
 }

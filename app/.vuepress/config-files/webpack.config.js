@@ -8,7 +8,7 @@ module.exports = config => {
       {
         options: {
           stylus: {
-            import: [path.resolve(__dirname, '../styles/variables.styl')]
+            import: [path.resolve(__dirname, './styles/variables.styl')]
           }
         }
       }
