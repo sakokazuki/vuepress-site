@@ -1,10 +1,9 @@
 <template lang="pug">
   div
-    h1 {{this.$lang.title}}
-    h2 {{this.$lang.text}}
-    p {{this.$lang.description_home}}
+    h1 home
+    p {{this.$localeConfig.text}}
 
-    img(:src="$withRelative('img/icon.jpg')")
+    img(:src="$withBase('/img/icon.jpg')")
 
 </template>
 
@@ -28,6 +27,9 @@ export default {
   },
   methods: {
 
+  },
+  data () {
+    return {}
   }
 }
 

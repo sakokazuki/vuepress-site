@@ -14,27 +14,16 @@ module.exports = {
     ['meta', {'http-equiv': 'X-UA-Compatible', content: 'IE=edge'}],
     ['meta', {name: 'keywords', content: 'hoge fuga piyo'}],
 
-    //- og
+    //favicon
+    ['link', {rel: "icon", href: '/favicon.ico', type: 'image/vnd.microsoft.icon'}],   
+    
     ['meta', {property: "og:type", content: "website"}],
-    ['meta', {property: "og:title", content: "meta.title"}],
-    ['meta', {property: "og:description", content: "meta.description"}],
-    ['meta', {property: "og:site_name", content: "title"}],
-    ['meta', {property: "og:url", content: "meta.url"}],
-    // ['meta', {property: "og:image", content: "http://xxxx.com/img/ogimg"}],
+    ['meta', {property: "og:site_name", content: "Title"}],
+    ['meta', {property: "og:image", content: "http://localhost:8000/og.png"}],
     ['meta', {property: "og:locale", content: "ja_JP"}],
     ['meta', {name: "twitter:card", content: "summary_large_image"}],
-
-    //favicon
-    ['link', {rel: "icon", href: '/favicon.ico', type: 'image/vnd.microsoft.icon'}],
-
-    //test 01 inline js test
-    ['script', { type: 'text/javascript' }, `
-      console.log("head inner script");
-    `],
-    //test02 element is inserted body top
-    ['div', {}, '<!--<div>hoge</div>-->']
-    
   ],
   locales: locales,
-  chainWebpack: webpackConfig
+  chainWebpack: webpackConfig,
+  hoge: 'hoge'
 }

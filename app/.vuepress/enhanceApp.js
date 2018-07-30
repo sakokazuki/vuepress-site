@@ -1,13 +1,18 @@
-import HeaderMixin from './enhance-files/header-mixin'
-import CustomDataMixin from './enhance-files/custom-data-mixin'
-import PathFunc from './enhance-files/path-func'
+import TitleMixin from './mixins/title-mixin'
+import CommonData from './mixins/common-data'
+import store from './store'
+import routersetup from './router'
+
 export default ({
   Vue,
   options,
   router,
   siteData
 }) => {
-  Vue.mixin(CustomDataMixin);
-  Vue.mixin(HeaderMixin);
-  Vue.prototype.$withRelative = PathFunc;
+  Vue.mixin(TitleMixin);
+  Vue.mixin(CommonData);
+
+  Vue.mixin({store: store})
+  routersetup(router);
+
 }

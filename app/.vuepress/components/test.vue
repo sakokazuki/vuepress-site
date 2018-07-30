@@ -1,8 +1,7 @@
 <template lang="pug">
   div
-    h1 {{this.$lang.title}}
-    h2 {{this.$lang.text}}
-    p {{this.$lang.description_test}}
+    h1 test
+    p {{this.$localeConfig.test}}
 </template>
 
 <script>
