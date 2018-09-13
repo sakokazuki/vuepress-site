@@ -9,7 +9,7 @@
     "pug": "^2.0.3",
     "pug-plain-loader": "^1.0.0",
     "resolve-url-loader": "^2.3.0",
-    "vuepress": "^0.12.0",
+    "vuepress": "^0.14.2",
     "webpack": "^4.8.3"
   },
   "dependencies": {
