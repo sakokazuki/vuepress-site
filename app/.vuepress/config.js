@@ -8,7 +8,6 @@ module.exports = {
   description: 'description config',
   port: '9999',
   dest: './build',
-
   //[tagName, { attrName: attrValue }, innerHTML?]
   head: [
     ['meta', {'http-equiv': 'X-UA-Compatible', content: 'IE=edge'}],

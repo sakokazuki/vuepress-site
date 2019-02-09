@@ -2,17 +2,17 @@
   .theme-container
     p router link
       nav
-        router-link(:to="$withBase('/')") ja home /
-        router-link(:to="$withBase('/test/')") ja test /
-        router-link(:to="$withBase('/en/')") en home /
-        router-link(:to="$withBase('/en/test/')") en test /
+        router-link(to="/") ja home /
+        router-link(to="/test/") ja test /
+        router-link(to="/en/") en home /
+        router-link(to="/en/test/") en test /
       p external link
       nav
         a(:href="$withBase('/')") ja home /
         a(:href="$withBase('/test/')") ja test /
         a(:href="$withBase('/en/')") en home /
         a(:href="$withBase('/en/test/')") en test /
-        a(:href="$lang.google" target="_blank") google: {{this.$lang.google}}
+        a(:href="$localeConfig.google" target="_blank") google: {{this.$lang}}
     Content(:custom="false")
 </template>
 
@@ -38,28 +38,9 @@ export default {
   },
 
   mounted () {
-    // update title / meta tags
-    this.currentMetaTags = []
-    const updateMeta = () => {
-      document.title = this.$title
-      document.documentElement.lang = this.$lang
-      const meta = [
-        {
-          name: 'description',
-          content: this.$description
-        },
-        ...(this.$page.frontmatter.meta || [])
-      ]
-      this.currentMetaTags = updateMetaTags(meta, this.currentMetaTags)
-    }
-    this.$watch('$page', updateMeta)
-    updateMeta()
-
-    
   },
 
   beforeDestroy () {
-    updateMetaTags(null, this.currentMetaTags)
   },
 
   methods: {
@@ -94,23 +75,6 @@ export default {
   }
 }
 
-function updateMetaTags (meta, current) {
-  if (current) {
-    current.forEach(c => {
-      document.head.removeChild(c)
-    })
-  }
-  if (meta) {
-    return meta.map(m => {
-      const tag = document.createElement('meta')
-      Object.keys(m).forEach(key => {
-        tag.setAttribute(key, m[key])
-      })
-      document.head.appendChild(tag)
-      return tag
-    })
-  }
-}
 </script>
 
 <style src="./styles/reset.styl" lang="stylus"></style>

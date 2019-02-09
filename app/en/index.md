@@ -11,4 +11,5 @@ meta:
   -
     og:url: '//absolute-domain/en'
 ---
+[aiueo](/test/)
 <home/>
