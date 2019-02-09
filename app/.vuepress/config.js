@@ -19,10 +19,18 @@ module.exports = {
     
     ['meta', {property: "og:type", content: "website"}],
     ['meta', {property: "og:site_name", content: "Title"}],
-    ['meta', {property: "og:image", content: "http://localhost:8000/og.png"}],
+    ['meta', {property: "og:image", content: "http://localhost:9999/og.png"}],
     ['meta', {property: "og:locale", content: "ja_JP"}],
     ['meta', {name: "twitter:card", content: "summary_large_image"}],
   ],
   locales: locales,
   chainWebpack: webpackConfig,
+  plugins: [
+    [ 
+      '@vuepress/google-analytics',
+      {
+        'ga': '' // UA-00000000-0
+      }
+    ]  
+  ]
 }
