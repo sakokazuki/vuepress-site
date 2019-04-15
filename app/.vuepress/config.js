@@ -1,4 +1,5 @@
 
+const path = require('path')
 const locales = require('./config-files/locales')
 const webpackConfig = require('./config-files/webpack.config.js')
 
@@ -23,6 +24,12 @@ module.exports = {
     ['meta', {name: "twitter:card", content: "summary_large_image"}],
   ],
   locales: locales,
+  stylus: {
+    preferPathResolver: 'webpack', //default
+    import: [
+      path.resolve(__dirname, './config-files/styles/variables.styl'),
+    ],
+  },
   chainWebpack: webpackConfig,
   plugins: [
     [ 

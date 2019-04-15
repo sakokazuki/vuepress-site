@@ -11,4 +11,4 @@ meta:
   -
     og:url: '//absolute-domain/test'
 ---
-<test/>
+<page-test/>

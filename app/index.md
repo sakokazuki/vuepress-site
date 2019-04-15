@@ -13,5 +13,5 @@ meta:
     og:url: '//absolute-domain/'
 
 ---
-<home/>
+<page-home/>
 
