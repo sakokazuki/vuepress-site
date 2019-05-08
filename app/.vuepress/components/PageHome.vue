@@ -46,7 +46,7 @@ const wait = ()=>{
 
 </script>
 
-<style lang="stylus">
+<style lang="stylus" scoped>
 .content
   p
     color: $blue

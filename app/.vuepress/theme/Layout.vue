@@ -77,6 +77,6 @@ export default {
 
 </script>
 
-<style src="./styles/reset.styl" lang="stylus"></style>
+<style src="./styles/reset.styl" lang="stylus" scoped></style>
 
 
