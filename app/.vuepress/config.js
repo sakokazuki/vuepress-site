@@ -26,5 +26,14 @@ module.exports = {
         'ga': 'UA-12345678-1' // UA-00000000-0
       }
     ]
-  ]
+  ],
+  chainWebpack: (config, isServer) => {
+    const svgRule = config.module.rule('svg')
+    svgRule.uses.clear()
+
+    svgRule
+      .use('vue-svg-loader')
+      .loader('vue-svg-loader')
+
+  }
 }
