@@ -1,20 +1,9 @@
 <template lang="pug">
   .theme-container
-    p router link
-      nav
-        router-link(to="/") ja home /
-        router-link(to="/test/") ja test /
-        router-link(to="/en/") en home /
-        router-link(to="/en/test/") en test /
-      p external link
-      nav
-        a(:href="$withBase('/')") ja home /
-        a(:href="$withBase('/test/')") ja test /
-        a(:href="$withBase('/en/')") en home /
-        a(:href="$withBase('/en/test/')") en test /
-        a(:href="$localeConfig.google" target="_blank") google: {{this.$lang}}
+    p hoge
     Content(:custom="false")
 </template>
+
 
 <script>
 import Vue from 'vue'
@@ -25,7 +14,7 @@ export default {
     return {}
   },
   computed: {
-    
+
   },
   created () {
     if (this.$ssrContext) {
@@ -74,9 +63,5 @@ export default {
     }
   }
 }
-
 </script>
-
-<style src="./styles/reset.styl" lang="stylus" scoped></style>
-
 

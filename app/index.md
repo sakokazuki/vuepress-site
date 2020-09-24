@@ -1,12 +1,12 @@
 ---
-lang: ja
-title: home(ja)
-description: home description(ja)
+lang: 
+title: home
+description: home description
 meta:
   -
-    og:title: 'og:title=home(ja)'
+    og:title: 'og:title=home'
   -
-    og:desciption: 'og:description=home description(ja)'
+    og:desciption: 'og:description=home description'
   -
     og:image: '//absolute-domain/thisog.jpg'
   -
@@ -14,4 +14,3 @@ meta:
 
 ---
 <page-home/>
-

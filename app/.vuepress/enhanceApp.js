@@ -1,7 +1,19 @@
-import TitleMixin from './enhance-files/mixins/title-mixin'
-import CommonData from './enhance-files/mixins/common-data'
-import store from './enhance-files/store'
-import routersetup from './enhance-files/router'
+import store from './store'
+
+//titleの表示のデフォルトの設定を上書きする。
+// frontmatter > locale > configの順
+const TitleOverwrite = {
+  computed: {
+    $title () {
+      const page = this.$page
+      const siteTitle = this.$siteTitle // locale.title || title
+      const title = page.frontmatter.title || siteTitle
+
+      return title
+    }
+  }
+}
+
 
 export default ({
   Vue,
@@ -9,10 +21,7 @@ export default ({
   router,
   siteData
 }) => {
-  Vue.mixin(TitleMixin);
-  Vue.mixin(CommonData);
+  Vue.mixin(TitleOverwrite);
 
   Vue.mixin({store: store})
-  routersetup(router);
-
 }

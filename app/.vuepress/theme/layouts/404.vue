@@ -5,7 +5,8 @@
 
 export default {
   mounted() {
-    location.href=this.$site.base    
+    location.href=this.$site.base
   }
 }
 </script>
+

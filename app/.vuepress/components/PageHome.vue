@@ -1,8 +1,7 @@
 <template lang="pug">
   div
     h1 home
-    p {{this.$localeConfig.text}}
-
+    p blue text
     img(:src="$withBase('/img/icon.jpg')")
 
 </template>
@@ -13,7 +12,6 @@ import Vue from 'vue'
 export default {
   components: {  },
 
-
   computed: {
   },
 
@@ -23,9 +21,11 @@ export default {
   mounted () {
     asyncFunc();
   },
+
   methods: {
 
   },
+
   data () {
     return {}
   }
@@ -33,6 +33,7 @@ export default {
 
 const asyncFunc = async ()=>{
   await wait();
+  console.log("end async test");
 }
 
 const wait = ()=>{
@@ -47,8 +48,8 @@ const wait = ()=>{
 </script>
 
 <style lang="stylus" scoped>
-.content
-  p
-    color: $blue
+p
+  color: $blue
 </style>
+
 

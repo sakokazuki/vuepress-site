@@ -4,17 +4,13 @@
   "version": "1.0.0",
   "main": "index.js",
   "devDependencies": {
-    "@babel/core": "^7.2.2",
-    "@babel/polyfill": "^7.2.5",
-    "@babel/preset-env": "^7.3.1",
-    "@vuepress/plugin-google-analytics": "^1.0.0-alpha.0",
-    "pug": "^2.0.3",
+    "@vuepress/plugin-google-analytics": "^1.5.4",
+    "pug": "^3.0.0",
     "pug-plain-loader": "^1.0.0",
-    "resolve-url-loader": "^3.0.0",
-    "vuepress": "^1.0.0-alpha.37"
+    "vuepress": "^1.5.4"
   },
   "dependencies": {
-    "vuex": "^3.1.0"
+    "vuex": "^3.5.1"
   },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
